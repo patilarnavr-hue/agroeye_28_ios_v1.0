@@ -370,7 +370,7 @@ const Auth = () => {
         )}
 
         {/* Auth card */}
-        <div className="ios-grouped-section p-5 space-y-4">
+        <div className="liquid-glass p-5 space-y-4">
           {/* Method toggle */}
           <div className="flex gap-2">
             <Button
