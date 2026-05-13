@@ -321,11 +321,11 @@ const Auth = () => {
   );
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center mesh-gradient p-4">
+      <div className="w-full max-w-md relative z-10">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-20 h-20 mx-auto rounded-[22px] bg-primary/10 flex items-center justify-center mb-4">
+          <div className="w-20 h-20 mx-auto rounded-[22px] glass-badge flex items-center justify-center mb-4">
             <Sprout className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-[28px] font-bold tracking-tight text-foreground">AgroEye</h1>
