@@ -1,0 +1,117 @@
+{
+  "app": {
+    "name": "AgroEye",
+    "tagline": "Surveillance Agricole Intelligente"
+  },
+  "nav": {
+    "home": "Accueil",
+    "moisture": "Humidité",
+    "fertility": "Fertilité",
+    "schedule": "Calendrier",
+    "crops": "Cultures",
+    "profile": "Profil"
+  },
+  "home": {
+    "welcome": "Bienvenue sur AgroEye",
+    "healthScore": "Score de Santé Général",
+    "quickActions": "Actions Rapides",
+    "addReading": "Ajouter une Lecture",
+    "manageSchedule": "Gérer le Calendrier",
+    "recentActivity": "Activité Récente",
+    "alerts": "Alertes",
+    "noAlerts": "Aucune alerte active",
+    "tips": "Conseils de Culture"
+  },
+  "moisture": {
+    "title": "Humidité du Sol",
+    "currentLevel": "Niveau d'Humidité Actuel",
+    "status": "Statut",
+    "optimal": "Optimal",
+    "low": "Bas",
+    "high": "Élevé",
+    "addReading": "Enregistrer une Nouvelle Lecture",
+    "history": "Historique d'Humidité",
+    "lastReading": "Dernière Lecture",
+    "noData": "Aucune donnée d'humidité pour le moment",
+    "startTracking": "Commencez à suivre vos niveaux d'humidité du sol"
+  },
+  "fertility": {
+    "title": "Fertilité du Sol",
+    "currentLevel": "Niveau de Fertilité Actuel",
+    "npk": "Niveaux NPK",
+    "nitrogen": "Azote",
+    "phosphorus": "Phosphore",
+    "potassium": "Potassium",
+    "addReading": "Enregistrer les Données de Fertilité",
+    "history": "Historique de Fertilité",
+    "recommendations": "Recommandations",
+    "noData": "Aucune donnée de fertilité pour le moment",
+    "startTracking": "Commencez à suivre vos niveaux de fertilité du sol"
+  },
+  "schedule": {
+    "title": "Calendrier d'Arrosage",
+    "addSlot": "Ajouter un Créneau",
+    "editSlot": "Modifier le Créneau",
+    "deleteSlot": "Supprimer le Créneau",
+    "nextWatering": "Prochain Arrosage",
+    "activeSchedules": "Calendriers Actifs",
+    "noSchedules": "Aucun calendrier pour le moment",
+    "createSchedule": "Créez votre premier calendrier d'arrosage"
+  },
+  "crops": {
+    "title": "Mes Cultures",
+    "addCrop": "Ajouter une Culture",
+    "noCrops": "Aucune culture pour le moment",
+    "startAdding": "Commencez à ajouter vos cultures pour suivre leur santé",
+    "export": "Exporter PDF",
+    "compare": "Comparer les Cultures"
+  },
+  "profile": {
+    "title": "Profil et Paramètres",
+    "account": "Informations du Compte",
+    "settings": "Paramètres",
+    "theme": "Mode Sombre",
+    "language": "Langue",
+    "notifications": "Notifications",
+    "notificationsEnabled": "Activer les Notifications",
+    "moistureAlerts": "Alertes de Niveau d'Humidité",
+    "scheduleReminders": "Rappels de Calendrier",
+    "generalAlerts": "Alertes Générales",
+    "data": "Gestion des Données",
+    "exportData": "Exporter les Données",
+    "clearData": "Effacer Toutes les Données",
+    "about": "À Propos",
+    "version": "Version",
+    "logout": "Déconnexion"
+  },
+  "auth": {
+    "login": "Connexion",
+    "signup": "S'inscrire",
+    "email": "E-mail",
+    "password": "Mot de Passe",
+    "confirmPassword": "Confirmer le Mot de Passe",
+    "forgotPassword": "Mot de passe oublié?",
+    "noAccount": "Vous n'avez pas de compte?",
+    "hasAccount": "Vous avez déjà un compte?"
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "confirm": "Confirmer",
+    "back": "Retour"
+  },
+  "tooltips": {
+    "moisture": "Surveillez vos niveaux d'humidité du sol pour assurer un arrosage optimal",
+    "fertility": "Suivez les niveaux NPK pour maintenir une composition de sol saine",
+    "schedule": "Définissez des rappels d'arrosage automatisés pour vos cultures",
+    "healthScore": "Indicateur de santé global basé sur les données d'humidité et de fertilité",
+    "darkMode": "Basculer entre les thèmes clair et sombre",
+    "notifications": "Configurer les préférences d'alerte pour les mises à jour d'humidité et de calendrier"
+  }
+}
