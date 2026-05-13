@@ -234,8 +234,8 @@ const Auth = () => {
   // Show email verification pending
   if (showVerificationPending) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background p-4">
-        <div className="w-full max-w-md text-center space-y-5">
+      <div className="min-h-screen flex items-center justify-center mesh-gradient p-4">
+        <div className="w-full max-w-md text-center space-y-5 relative z-10">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -247,7 +247,7 @@ const Auth = () => {
           <p className="text-sm text-muted-foreground leading-relaxed">
             We've sent a verification link to <span className="font-medium text-foreground">{email}</span>. Please check your inbox and click the link to activate your account.
           </p>
-          <div className="ios-grouped-section p-4 text-xs text-muted-foreground space-y-2">
+          <div className="liquid-glass p-4 text-xs text-muted-foreground space-y-2">
             <p>• Check your spam folder if you don't see the email</p>
             <p>• The link expires in 24 hours</p>
             <p>• You can sign in once your email is verified</p>
@@ -263,8 +263,8 @@ const Auth = () => {
   // Show forgot password
   if (showForgotPassword) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background p-4">
-        <div className="w-full max-w-md">
+      <div className="min-h-screen flex items-center justify-center mesh-gradient p-4">
+        <div className="w-full max-w-md relative z-10">
           <div className="text-center mb-8">
             <div className="w-20 h-20 mx-auto rounded-[22px] bg-primary/10 flex items-center justify-center mb-4">
               <Mail className="w-10 h-10 text-primary" />
@@ -272,7 +272,7 @@ const Auth = () => {
             <h1 className="text-[28px] font-bold tracking-tight text-foreground">Forgot Password</h1>
             <p className="text-[15px] text-muted-foreground mt-1">Enter your email to receive a reset link</p>
           </div>
-          <div className="ios-grouped-section p-5">
+          <div className="liquid-glass p-5">
             <form onSubmit={handleForgotPassword} className="space-y-4">
               <div className="space-y-1.5">
                 <Label className="text-[13px] text-muted-foreground">Email Address</Label>
@@ -321,11 +321,11 @@ const Auth = () => {
   );
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center mesh-gradient p-4">
+      <div className="w-full max-w-md relative z-10">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="w-20 h-20 mx-auto rounded-[22px] bg-primary/10 flex items-center justify-center mb-4">
+          <div className="w-20 h-20 mx-auto rounded-[22px] glass-badge flex items-center justify-center mb-4">
             <Sprout className="w-10 h-10 text-primary" />
           </div>
           <h1 className="text-[28px] font-bold tracking-tight text-foreground">AgroEye</h1>
@@ -342,13 +342,13 @@ const Auth = () => {
             <button
               onClick={handleBiometricAuth}
               disabled={biometricScanning}
-              className="w-full ios-grouped-section p-4 flex flex-col items-center gap-3 active:scale-[0.98] transition-transform"
+              className="w-full liquid-glass p-4 flex flex-col items-center gap-3 active:scale-[0.98] transition-transform"
               aria-label={`Sign in with ${biometricName}`}
             >
               <motion.div
                 animate={biometricScanning ? { scale: [1, 1.1, 1], opacity: [1, 0.7, 1] } : {}}
                 transition={{ repeat: Infinity, duration: 1.5 }}
-                className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center"
+                className="w-16 h-16 rounded-full glass-badge flex items-center justify-center"
               >
                 <BiometricIcon className="w-8 h-8 text-primary" />
               </motion.div>
@@ -362,7 +362,7 @@ const Auth = () => {
 
             <div className="relative my-4">
               <Separator />
-              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 text-[11px] text-muted-foreground uppercase tracking-wider">
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 glass-badge px-3 py-0.5 rounded-full text-[11px] text-muted-foreground uppercase tracking-wider">
                 or sign in manually
               </span>
             </div>
@@ -370,7 +370,7 @@ const Auth = () => {
         )}
 
         {/* Auth card */}
-        <div className="ios-grouped-section p-5 space-y-4">
+        <div className="liquid-glass p-5 space-y-4">
           {/* Method toggle */}
           <div className="flex gap-2">
             <Button
