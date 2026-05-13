@@ -234,8 +234,8 @@ const Auth = () => {
   // Show email verification pending
   if (showVerificationPending) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background p-4">
-        <div className="w-full max-w-md text-center space-y-5">
+      <div className="min-h-screen flex items-center justify-center mesh-gradient p-4">
+        <div className="w-full max-w-md text-center space-y-5 relative z-10">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -247,7 +247,7 @@ const Auth = () => {
           <p className="text-sm text-muted-foreground leading-relaxed">
             We've sent a verification link to <span className="font-medium text-foreground">{email}</span>. Please check your inbox and click the link to activate your account.
           </p>
-          <div className="ios-grouped-section p-4 text-xs text-muted-foreground space-y-2">
+          <div className="liquid-glass p-4 text-xs text-muted-foreground space-y-2">
             <p>• Check your spam folder if you don't see the email</p>
             <p>• The link expires in 24 hours</p>
             <p>• You can sign in once your email is verified</p>
@@ -263,8 +263,8 @@ const Auth = () => {
   // Show forgot password
   if (showForgotPassword) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background p-4">
-        <div className="w-full max-w-md">
+      <div className="min-h-screen flex items-center justify-center mesh-gradient p-4">
+        <div className="w-full max-w-md relative z-10">
           <div className="text-center mb-8">
             <div className="w-20 h-20 mx-auto rounded-[22px] bg-primary/10 flex items-center justify-center mb-4">
               <Mail className="w-10 h-10 text-primary" />
@@ -272,7 +272,7 @@ const Auth = () => {
             <h1 className="text-[28px] font-bold tracking-tight text-foreground">Forgot Password</h1>
             <p className="text-[15px] text-muted-foreground mt-1">Enter your email to receive a reset link</p>
           </div>
-          <div className="ios-grouped-section p-5">
+          <div className="liquid-glass p-5">
             <form onSubmit={handleForgotPassword} className="space-y-4">
               <div className="space-y-1.5">
                 <Label className="text-[13px] text-muted-foreground">Email Address</Label>
