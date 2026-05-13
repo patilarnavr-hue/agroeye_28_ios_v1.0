@@ -49,8 +49,8 @@
     --glass-border-subtle: 0 0% 0% / 0.04;
     --glass-shadow: 0 1px 8px 0 rgba(0,0,0,0.04), 0 0 0 0.5px rgba(0,0,0,0.03);
     --glass-shadow-elevated: 0 4px 16px 0 rgba(0,0,0,0.06), 0 0 0 0.5px rgba(0,0,0,0.04);
-    --glass-blur: 20px;
-    --glass-saturate: 120%;
+    --glass-blur: 40px;
+    --glass-saturate: 180%;
     --glass-inner-glow: inset 0 0.5px 0 0 hsl(0 0% 100% / 0.3), inset 0 -0.5px 0 0 hsl(0 0% 0% / 0.02);
 
     --sidebar-background: 225 18% 91%;
@@ -150,6 +150,9 @@
     box-shadow: var(--glass-shadow), var(--glass-inner-glow);
     border-radius: var(--radius);
     transform: translateZ(0);
+    will-change: backdrop-filter;
+    isolation: isolate;
+    contain: paint;
   }
 
   .glass-card-elevated {
@@ -160,6 +163,9 @@
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
     border-radius: var(--radius);
     transform: translateZ(0);
+    will-change: backdrop-filter;
+    isolation: isolate;
+    contain: paint;
   }
 
   /* Floating pill tab bar — iOS 26 */
@@ -169,6 +175,9 @@
     -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
     border: 0.5px solid hsl(var(--glass-border));
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+    isolation: isolate;
   }
 
   /* Header with translucent gradient */
