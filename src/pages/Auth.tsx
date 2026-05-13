@@ -342,13 +342,13 @@ const Auth = () => {
             <button
               onClick={handleBiometricAuth}
               disabled={biometricScanning}
-              className="w-full ios-grouped-section p-4 flex flex-col items-center gap-3 active:scale-[0.98] transition-transform"
+              className="w-full liquid-glass p-4 flex flex-col items-center gap-3 active:scale-[0.98] transition-transform"
               aria-label={`Sign in with ${biometricName}`}
             >
               <motion.div
                 animate={biometricScanning ? { scale: [1, 1.1, 1], opacity: [1, 0.7, 1] } : {}}
                 transition={{ repeat: Infinity, duration: 1.5 }}
-                className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center"
+                className="w-16 h-16 rounded-full glass-badge flex items-center justify-center"
               >
                 <BiometricIcon className="w-8 h-8 text-primary" />
               </motion.div>
