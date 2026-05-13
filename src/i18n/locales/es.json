@@ -1,0 +1,117 @@
+{
+  "app": {
+    "name": "AgroEye",
+    "tagline": "Monitoreo Agrícola Inteligente"
+  },
+  "nav": {
+    "home": "Inicio",
+    "moisture": "Humedad",
+    "fertility": "Fertilidad",
+    "schedule": "Horario",
+    "crops": "Cultivos",
+    "profile": "Perfil"
+  },
+  "home": {
+    "welcome": "Bienvenido a AgroEye",
+    "healthScore": "Puntuación de Salud General",
+    "quickActions": "Acciones Rápidas",
+    "addReading": "Añadir Lectura",
+    "manageSchedule": "Gestionar Horario",
+    "recentActivity": "Actividad Reciente",
+    "alerts": "Alertas",
+    "noAlerts": "No hay alertas activas",
+    "tips": "Consejos de Cultivo"
+  },
+  "moisture": {
+    "title": "Humedad del Suelo",
+    "currentLevel": "Nivel de Humedad Actual",
+    "status": "Estado",
+    "optimal": "Óptimo",
+    "low": "Bajo",
+    "high": "Alto",
+    "addReading": "Registrar Nueva Lectura",
+    "history": "Historial de Humedad",
+    "lastReading": "Última Lectura",
+    "noData": "No hay datos de humedad aún",
+    "startTracking": "Comienza a rastrear tus niveles de humedad del suelo"
+  },
+  "fertility": {
+    "title": "Fertilidad del Suelo",
+    "currentLevel": "Nivel de Fertilidad Actual",
+    "npk": "Niveles NPK",
+    "nitrogen": "Nitrógeno",
+    "phosphorus": "Fósforo",
+    "potassium": "Potasio",
+    "addReading": "Registrar Datos de Fertilidad",
+    "history": "Historial de Fertilidad",
+    "recommendations": "Recomendaciones",
+    "noData": "No hay datos de fertilidad aún",
+    "startTracking": "Comienza a rastrear tus niveles de fertilidad del suelo"
+  },
+  "schedule": {
+    "title": "Horario de Riego",
+    "addSlot": "Añadir Horario",
+    "editSlot": "Editar Horario",
+    "deleteSlot": "Eliminar Horario",
+    "nextWatering": "Próximo Riego",
+    "activeSchedules": "Horarios Activos",
+    "noSchedules": "No hay horarios aún",
+    "createSchedule": "Crea tu primer horario de riego"
+  },
+  "crops": {
+    "title": "Mis Cultivos",
+    "addCrop": "Añadir Cultivo",
+    "noCrops": "No hay cultivos aún",
+    "startAdding": "Comienza a añadir tus cultivos para rastrear su salud",
+    "export": "Exportar PDF",
+    "compare": "Comparar Cultivos"
+  },
+  "profile": {
+    "title": "Perfil y Configuración",
+    "account": "Información de Cuenta",
+    "settings": "Configuración",
+    "theme": "Modo Oscuro",
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "notificationsEnabled": "Habilitar Notificaciones",
+    "moistureAlerts": "Alertas de Nivel de Humedad",
+    "scheduleReminders": "Recordatorios de Horario",
+    "generalAlerts": "Alertas Generales",
+    "data": "Gestión de Datos",
+    "exportData": "Exportar Datos",
+    "clearData": "Borrar Todos los Datos",
+    "about": "Acerca de",
+    "version": "Versión",
+    "logout": "Cerrar Sesión"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "hasAccount": "¿Ya tienes una cuenta?"
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "confirm": "Confirmar",
+    "back": "Atrás"
+  },
+  "tooltips": {
+    "moisture": "Monitorea tus niveles de humedad del suelo para asegurar un riego óptimo",
+    "fertility": "Rastrea los niveles NPK para mantener una composición saludable del suelo",
+    "schedule": "Establece recordatorios automáticos de riego para tus cultivos",
+    "healthScore": "Indicador de salud general basado en datos de humedad y fertilidad",
+    "darkMode": "Cambia entre temas claros y oscuros",
+    "notifications": "Configura las preferencias de alertas para actualizaciones de humedad y horario"
+  }
+}
