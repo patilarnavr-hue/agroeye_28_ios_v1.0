@@ -606,4 +606,81 @@
   .leaflet-control-container {
     z-index: 5;
   }
+
+  /* ============================================
+     Device-Tuned Backdrop Stability
+     ============================================ */
+
+  /* Small phones — reduce blur to prevent jank */
+  @media (max-width: 430px) {
+    :root {
+      --glass-blur: 36px;
+      --glass-saturate: 180%;
+    }
+  }
+
+  /* Mid phones / large phones */
+  @media (min-width: 431px) and (max-width: 768px) {
+    :root {
+      --glass-blur: 48px;
+      --glass-saturate: 200%;
+    }
+  }
+
+  /* Reduced motion — drop expensive filters */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --glass-blur: 24px;
+      --glass-saturate: 150%;
+    }
+    .mesh-gradient,
+    .mesh-gradient::before,
+    .mesh-gradient::after {
+      animation: none !important;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  /* Fallback for browsers without backdrop-filter (older WebViews) */
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .glass-card,
+    .glass-card-elevated,
+    .liquid-glass,
+    .glass-nav,
+    .glass-header,
+    .glass-input,
+    .glass-button,
+    .ios-grouped-section,
+    .glass-dialog {
+      background: hsl(var(--glass-bg-thick));
+    }
+  }
+
+  /* Stabilize backdrop layers — promote to GPU & avoid sub-pixel flicker */
+  .glass-card,
+  .glass-card-elevated,
+  .liquid-glass,
+  .glass-nav,
+  .glass-header,
+  .glass-input,
+  .glass-button,
+  .ios-grouped-section,
+  .glass-dialog {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+  }
+
+  /* iOS Capacitor safe-area helpers */
+  .safe-top { padding-top: env(safe-area-inset-top); }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+  .safe-x { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
 }
