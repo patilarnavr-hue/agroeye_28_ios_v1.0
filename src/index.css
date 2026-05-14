@@ -159,7 +159,7 @@
     box-shadow: var(--glass-shadow), var(--glass-inner-glow);
     border-radius: var(--radius);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
@@ -202,7 +202,7 @@
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
     border-radius: var(--radius);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
@@ -251,7 +251,7 @@
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
     border-radius: calc(var(--radius) + 4px);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
@@ -292,7 +292,7 @@
     border: 1px solid hsl(var(--glass-border));
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
@@ -519,8 +519,12 @@
       radial-gradient(at 50% 85%, hsl(142 35% 55% / 0.40) 0px, transparent 50%),
       radial-gradient(at 80% 80%, hsl(160 50% 58% / 0.30) 0px, transparent 50%),
       radial-gradient(at 25% 70%, hsl(200 45% 62% / 0.25) 0px, transparent 50%);
-    background-size: 200% 200%;
-    animation: meshMove 12s ease-in-out infinite alternate;
+    background-size: 180% 180%;
+    background-position: 50% 50%;
+    transform: translate3d(0, 0, 0);
+    isolation: isolate;
+    /* Animate via transform on a child pseudo, not background-position,
+       so backdrop-filter layers above don't re-rasterize each frame. */
   }
 
   .dark .mesh-gradient {
@@ -530,26 +534,26 @@
       radial-gradient(at 50% 85%, hsl(142 35% 30% / 0.30) 0px, transparent 50%),
       radial-gradient(at 80% 80%, hsl(160 50% 32% / 0.25) 0px, transparent 50%),
       radial-gradient(at 25% 70%, hsl(200 45% 35% / 0.20) 0px, transparent 50%);
-    background-size: 200% 200%;
-    animation: meshMove 12s ease-in-out infinite alternate;
   }
 
-  /* Floating orb accents for extra depth */
+  /* Soft drifting orb — single GPU-friendly transform animation */
   .mesh-gradient::before {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: -10%;
     background:
-      radial-gradient(circle at 30% 30%, hsl(142 50% 70% / 0.2) 0%, transparent 40%),
-      radial-gradient(circle at 70% 70%, hsl(190 55% 65% / 0.15) 0%, transparent 40%);
-    animation: orbFloat 8s ease-in-out infinite alternate;
+      radial-gradient(circle at 30% 30%, hsl(142 50% 70% / 0.18) 0%, transparent 45%),
+      radial-gradient(circle at 70% 70%, hsl(190 55% 65% / 0.14) 0%, transparent 45%);
+    animation: orbDrift 24s ease-in-out infinite alternate;
     pointer-events: none;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
   }
 
   .dark .mesh-gradient::before {
     background:
-      radial-gradient(circle at 30% 30%, hsl(142 40% 30% / 0.2) 0%, transparent 40%),
-      radial-gradient(circle at 70% 70%, hsl(190 40% 30% / 0.15) 0%, transparent 40%);
+      radial-gradient(circle at 30% 30%, hsl(142 40% 30% / 0.18) 0%, transparent 45%),
+      radial-gradient(circle at 70% 70%, hsl(190 40% 30% / 0.14) 0%, transparent 45%);
   }
 }
 
@@ -577,13 +581,12 @@
   }
 
   @keyframes meshMove {
-    0% { background-position: 0% 0%, 100% 0%, 50% 100%, 100% 100%, 0% 100%; }
-    100% { background-position: 100% 100%, 0% 100%, 0% 0%, 0% 0%, 100% 0%; }
+    0%, 100% { background-position: 50% 50%; }
   }
 
-  @keyframes orbFloat {
-    0% { transform: translate(0, 0) scale(1); opacity: 1; }
-    100% { transform: translate(20px, -15px) scale(1.1); opacity: 0.8; }
+  @keyframes orbDrift {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    100% { transform: translate3d(2%, -2%, 0) scale(1.04); }
   }
 
   /* Leaflet fixes */
