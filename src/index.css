@@ -159,7 +159,7 @@
     box-shadow: var(--glass-shadow), var(--glass-inner-glow);
     border-radius: var(--radius);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
@@ -202,7 +202,7 @@
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
     border-radius: var(--radius);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
@@ -251,7 +251,7 @@
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
     border-radius: calc(var(--radius) + 4px);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
@@ -292,7 +292,7 @@
     border: 1px solid hsl(var(--glass-border));
     box-shadow: var(--glass-shadow-elevated), var(--glass-inner-glow);
     transform: translateZ(0);
-    will-change: backdrop-filter;
+    will-change: transform;
     isolation: isolate;
     contain: paint layout;
     overflow: hidden;
